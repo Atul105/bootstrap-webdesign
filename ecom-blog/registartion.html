@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--Header-->
+      <header>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Welcome to Ecomerce WebApp!!!</strong> You should check in on some of those fields <a href="#" class="badge badge-success">Here</a>.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+      </header>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Ecomerce WebApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registartion.html">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Create Product</a>
+            <a class="dropdown-item" href="#">Update Product</a>
+            <a class="dropdown-item" href="#">Delete Product</a>
+            <a class="dropdown-item" href="#">List Products</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!--registartion-->
+  <div class="container form-container">
+    <h1>Registartion Form</h1>
+    <form action="/register" method="post" class="form-validate" novalidate >
+
+      <div class="form-row form-group">
+
+        <div class="col-md-6">
+          <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" class="form-control" required minlength="3" maxlength="8">
+
+        <div class="valid-feedback">
+          The firstname is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The firstname is invalid
+        </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" class="form-control" required minlength="3" maxlength="8">
+        
+        
+        <div class="valid-feedback">
+          The lastname is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The lastname is invalid
+        </div> 
+
+        </div>
+      </div>
+
+      <div class="form-row form-group">
+
+        <div class="col-md-6">
+          <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="form-control" required minlength="3" maxlength="8">
+
+        
+        <div class="valid-feedback">
+          The username is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The username is invalid
+        </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" required minlength="3" maxlength="30">
+
+        
+        <div class="valid-feedback">
+          The email is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The email is invalid
+        </div>
+
+        </div>
+
+      </div>
+
+      <div class="form-row form-group">
+
+        <div class="col-md-6">
+          <label for="Password">Password</label>
+        <input type="password" name="Password" id="password" class="form-control" required minlength="3" maxlength="8">
+
+        
+        <div class="valid-feedback">
+          The password is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The password is invalid
+        </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <label for="cnfPassword">Confirm Password</label>
+        <input type="text" name="cnfPassword" id="cnfPassword" class="form-control" required minlength="3" maxlength="8">
+
+        
+        <div class="valid-feedback">
+          The cnfPassword is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The cnfPassword is invalid
+        </div>
+
+        </div>
+
+      </div>
+
+      <div class="form-row form-group">
+
+        <div class="col-md-6">
+          <label for="roleSelect">Select Role</label>
+        <select class="form-control" id="roleSelect" name="roles" required>
+          <option value="">Choose...</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="vendor">Vendor</option>
+        </select>
+
+        
+        <div class="valid-feedback">
+          The selctField is perfect
+        </div>
+
+        <div class="invalid-feedback">
+          The selctField is invalid
+        </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="userStatus" id="active" value="active" required>
+            <label class="form-check-label" for="inlineRadio1">Active</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="userStatus" id="inactive" value="inactive" required>
+            <label class="form-check-label" for="inlineRadio2">Inactive</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row form-group ml-3">
+        <div class="col-mid-6">
+          <input type="checkbox" required class="form-check-input" id="rememberme" name="rememberme">
+          <label for="rememberme">Remember Me</label>
+
+          
+        <div class="valid-feedback">
+          You are ready to go..
+        </div>
+
+        <div class="invalid-feedback">
+          plz select me
+        </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <button type="submit" class="btn btn-outline-success btn-block">Sign Up</button>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </form>
+  </div>
+
+    <script>
+      var form = document.querySelector('.form-validate');
+      //console.log(form);
+      form.addEventListener('submit', function(event){
+       if(form.checkValidity()===false){
+        event.preventDefault();
+        event.stopPropagation();
+       }
+       form.classList.add("was-validated");
+      })
+    </script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
